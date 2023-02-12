@@ -56,30 +56,30 @@ public class Main {
         return customerRepository.findAll();
     }
 
-    @GetMapping("/")
-    public String defaultValue() {
-        return "This is the main page...";
-    }
-    @GetMapping("/greet")
-    public GreetResponse greet() {
-        GreetResponse response = new GreetResponse(
-                "Hello",
-                List.of("Java", "Python", "C"),
-                new Person("Ândrya", 21, 2)
-        );
-        return response;
+    // @GetMapping("/")
+    // public String defaultValue() {
+    //     return "This is the main page...";
+    // }
+    // @GetMapping("/greet")
+    // public GreetResponse greet() {
+    //     GreetResponse response = new GreetResponse(
+    //             "Hello",
+    //             List.of("Java", "Python", "C"),
+    //             new Person("Ândrya", 21, 2)
+    //     );
+    //     return response;
 
-        //redundante - pode dar return new response = new greetresponse()....
-    }
+    //     //redundante - pode dar return new response = new greetresponse()....
+    // }
 
-    record Person(String name, int age, double savings) {
+    // record Person(String name, int age, double savings) {
 
-    }
-    record GreetResponse(
-            String greet,
-            List<String> favProgrammingLanguages,
-            Person person
-    ) {
+    // }
+    // record GreetResponse(
+    //         String greet,
+    //         List<String> favProgrammingLanguages,
+    //         Person person
+    // ) {
 
     }
 }
